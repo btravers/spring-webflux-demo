@@ -1,0 +1,2 @@
+tweet-service:
+  base-url: http://localhost:8090
