@@ -9,6 +9,8 @@ import java.time.Duration
 @Service
 class TweetService(private val tweetRepository: TweetRepository) {
 
+    fun getTweet(id: Long) = this.tweetRepository.findById(id)
+
     fun getTweetContentByTag(tag: String): Flux<String> {
         return this.tweetRepository.findAll()
                 .filter { tweet -> tweet.hashtag == tag }
